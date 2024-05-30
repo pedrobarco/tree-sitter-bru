@@ -1,0 +1,906 @@
+[
+  {
+    "type": "assert",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auth_awsv4",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auth_basic",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auth_bearer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auth_digest",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auth_oauth2",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auths",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "auth_awsv4",
+          "named": true
+        },
+        {
+          "type": "auth_basic",
+          "named": true
+        },
+        {
+          "type": "auth_bearer",
+          "named": true
+        },
+        {
+          "type": "auth_digest",
+          "named": true
+        },
+        {
+          "type": "auth_oauth2",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_content",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "bodies",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "body_form_urlencoded",
+          "named": true
+        },
+        {
+          "type": "body_graphql",
+          "named": true
+        },
+        {
+          "type": "body_graphql_vars",
+          "named": true
+        },
+        {
+          "type": "body_json",
+          "named": true
+        },
+        {
+          "type": "body_multipart_form",
+          "named": true
+        },
+        {
+          "type": "body_sparql",
+          "named": true
+        },
+        {
+          "type": "body_text",
+          "named": true
+        },
+        {
+          "type": "body_xml",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_form_urlencoded",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_graphql",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_graphql_vars",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_json",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_multipart_form",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_sparql",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_xml",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "connect",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dictionary",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "docs",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "document",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assert",
+          "named": true
+        },
+        {
+          "type": "auths",
+          "named": true
+        },
+        {
+          "type": "bodies",
+          "named": true
+        },
+        {
+          "type": "docs",
+          "named": true
+        },
+        {
+          "type": "headers",
+          "named": true
+        },
+        {
+          "type": "http",
+          "named": true
+        },
+        {
+          "type": "meta",
+          "named": true
+        },
+        {
+          "type": "query",
+          "named": true
+        },
+        {
+          "type": "scripts",
+          "named": true
+        },
+        {
+          "type": "tests",
+          "named": true
+        },
+        {
+          "type": "vars",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "head",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "headers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "http",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "connect",
+          "named": true
+        },
+        {
+          "type": "delete",
+          "named": true
+        },
+        {
+          "type": "get",
+          "named": true
+        },
+        {
+          "type": "head",
+          "named": true
+        },
+        {
+          "type": "options",
+          "named": true
+        },
+        {
+          "type": "patch",
+          "named": true
+        },
+        {
+          "type": "post",
+          "named": true
+        },
+        {
+          "type": "put",
+          "named": true
+        },
+        {
+          "type": "trace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "meta",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "patch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "put",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "query",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "script_post_response",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "script_pre_request",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scripts",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "script_post_response",
+          "named": true
+        },
+        {
+          "type": "script_pre_request",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tests",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vars",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "vars_post_response",
+          "named": true
+        },
+        {
+          "type": "vars_pre_request",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vars_post_response",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vars_pre_request",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "assert",
+    "named": false
+  },
+  {
+    "type": "auth:awsv4",
+    "named": false
+  },
+  {
+    "type": "auth:basic",
+    "named": false
+  },
+  {
+    "type": "auth:bearer",
+    "named": false
+  },
+  {
+    "type": "auth:digest",
+    "named": false
+  },
+  {
+    "type": "auth:oauth2",
+    "named": false
+  },
+  {
+    "type": "body",
+    "named": false
+  },
+  {
+    "type": "body:form-urlencoded",
+    "named": false
+  },
+  {
+    "type": "body:graphql",
+    "named": false
+  },
+  {
+    "type": "body:graphql:vars",
+    "named": false
+  },
+  {
+    "type": "body:json",
+    "named": false
+  },
+  {
+    "type": "body:multipart",
+    "named": false
+  },
+  {
+    "type": "body:sparql",
+    "named": false
+  },
+  {
+    "type": "body:text",
+    "named": false
+  },
+  {
+    "type": "body:xml",
+    "named": false
+  },
+  {
+    "type": "connect",
+    "named": false
+  },
+  {
+    "type": "delete",
+    "named": false
+  },
+  {
+    "type": "docs",
+    "named": false
+  },
+  {
+    "type": "get",
+    "named": false
+  },
+  {
+    "type": "head",
+    "named": false
+  },
+  {
+    "type": "headers",
+    "named": false
+  },
+  {
+    "type": "key",
+    "named": true
+  },
+  {
+    "type": "meta",
+    "named": false
+  },
+  {
+    "type": "options",
+    "named": false
+  },
+  {
+    "type": "patch",
+    "named": false
+  },
+  {
+    "type": "post",
+    "named": false
+  },
+  {
+    "type": "put",
+    "named": false
+  },
+  {
+    "type": "query",
+    "named": false
+  },
+  {
+    "type": "script:post-response",
+    "named": false
+  },
+  {
+    "type": "script:pre-request",
+    "named": false
+  },
+  {
+    "type": "tests",
+    "named": false
+  },
+  {
+    "type": "trace",
+    "named": false
+  },
+  {
+    "type": "value",
+    "named": true
+  },
+  {
+    "type": "vars:post-response",
+    "named": false
+  },
+  {
+    "type": "vars:pre-request",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

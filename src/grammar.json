@@ -62,7 +62,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -116,7 +116,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -129,7 +129,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -142,7 +142,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -155,7 +155,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -168,7 +168,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -181,7 +181,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -194,7 +194,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -207,7 +207,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -220,7 +220,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -233,7 +233,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -246,7 +246,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -284,7 +284,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -297,7 +297,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -310,7 +310,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -323,7 +323,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -336,7 +336,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -390,7 +390,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -403,7 +403,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -416,7 +416,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -429,7 +429,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -442,7 +442,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -455,7 +455,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -468,7 +468,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -477,11 +477,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "body:multipart"
+          "value": "body:multipart-form"
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -494,7 +494,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -520,7 +520,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -533,7 +533,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -546,7 +546,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "dictionary_block"
         }
       ]
     },
@@ -572,7 +572,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -585,7 +585,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -598,7 +598,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
@@ -611,11 +611,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block_content"
+          "name": "text_block"
         }
       ]
     },
-    "dictionary": {
+    "dictionary_block": {
       "type": "SEQ",
       "members": [
         {
@@ -623,17 +623,21 @@
           "value": "{"
         },
         {
-          "type": "REPEAT1",
-          "content": {
-            "type": "SYMBOL",
-            "name": "pair"
-          }
+          "type": "SYMBOL",
+          "name": "dictionary"
         },
         {
           "type": "STRING",
           "value": "}"
         }
       ]
+    },
+    "dictionary": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "pair"
+      }
     },
     "pair": {
       "type": "SEQ",
@@ -672,7 +676,7 @@
       "type": "PATTERN",
       "value": "[^\\s][^\\n]*"
     },
-    "block_content": {
+    "text_block": {
       "type": "SEQ",
       "members": [
         {
@@ -680,20 +684,8 @@
           "value": "{"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_raw_content"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_any"
-              }
-            ]
-          }
+          "type": "SYMBOL",
+          "name": "text"
         },
         {
           "type": "STRING",
@@ -701,7 +693,23 @@
         }
       ]
     },
-    "_raw_content": {
+    "text": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_text"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_any"
+          }
+        ]
+      }
+    },
+    "_text": {
       "type": "SEQ",
       "members": [
         {
@@ -715,7 +723,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_raw_content"
+                "name": "_text"
               },
               {
                 "type": "SYMBOL",

@@ -48,7 +48,15 @@
   "tree-sitter": [
     {
       "scope": "source.bru",
-      "injection-regex": "^bru$"
+      "file-types": [
+        "bru"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ],
+      "injections": [
+        "queries/injections.scm"
+      ]
     }
   ]
 }

@@ -24,7 +24,7 @@ module.exports = grammar({
         ),
       ),
 
-    meta: ($) => seq("meta", $.dictionary),
+    meta: ($) => seq("meta", $.dictionary_block),
 
     http: ($) =>
       choice(
@@ -38,19 +38,19 @@ module.exports = grammar({
         $.connect,
         $.trace,
       ),
-    get: ($) => seq("get", $.dictionary),
-    post: ($) => seq("post", $.dictionary),
-    put: ($) => seq("put", $.dictionary),
-    delete: ($) => seq("delete", $.dictionary),
-    patch: ($) => seq("patch", $.dictionary),
-    options: ($) => seq("options", $.dictionary),
-    head: ($) => seq("head", $.dictionary),
-    connect: ($) => seq("connect", $.dictionary),
-    trace: ($) => seq("trace", $.dictionary),
+    get: ($) => seq("get", $.dictionary_block),
+    post: ($) => seq("post", $.dictionary_block),
+    put: ($) => seq("put", $.dictionary_block),
+    delete: ($) => seq("delete", $.dictionary_block),
+    patch: ($) => seq("patch", $.dictionary_block),
+    options: ($) => seq("options", $.dictionary_block),
+    head: ($) => seq("head", $.dictionary_block),
+    connect: ($) => seq("connect", $.dictionary_block),
+    trace: ($) => seq("trace", $.dictionary_block),
 
-    query: ($) => seq("query", $.dictionary),
+    query: ($) => seq("query", $.dictionary_block),
 
-    headers: ($) => seq("headers", $.dictionary),
+    headers: ($) => seq("headers", $.dictionary_block),
 
     auths: ($) =>
       choice(
@@ -60,11 +60,11 @@ module.exports = grammar({
         $.auth_digest,
         $.auth_oauth2,
       ),
-    auth_awsv4: ($) => seq("auth:awsv4", $.dictionary),
-    auth_basic: ($) => seq("auth:basic", $.dictionary),
-    auth_bearer: ($) => seq("auth:bearer", $.dictionary),
-    auth_digest: ($) => seq("auth:digest", $.dictionary),
-    auth_oauth2: ($) => seq("auth:oauth2", $.dictionary),
+    auth_awsv4: ($) => seq("auth:awsv4", $.dictionary_block),
+    auth_basic: ($) => seq("auth:basic", $.dictionary_block),
+    auth_bearer: ($) => seq("auth:bearer", $.dictionary_block),
+    auth_digest: ($) => seq("auth:digest", $.dictionary_block),
+    auth_oauth2: ($) => seq("auth:oauth2", $.dictionary_block),
 
     bodies: ($) =>
       choice(
@@ -78,37 +78,39 @@ module.exports = grammar({
         $.body_multipart_form,
         $.body,
       ),
-    body_json: ($) => seq("body:json", $.block_content),
-    body_text: ($) => seq("body:text", $.block_content),
-    body_xml: ($) => seq("body:xml", $.block_content),
-    body_sparql: ($) => seq("body:sparql", $.block_content),
-    body_graphql: ($) => seq("body:graphql", $.block_content),
-    body_graphql_vars: ($) => seq("body:graphql:vars", $.block_content),
-    body_form_urlencoded: ($) => seq("body:form-urlencoded", $.block_content),
-    body_multipart_form: ($) => seq("body:multipart", $.block_content),
-    body: ($) => seq("body", $.block_content),
+    body_json: ($) => seq("body:json", $.text_block),
+    body_text: ($) => seq("body:text", $.text_block),
+    body_xml: ($) => seq("body:xml", $.text_block),
+    body_sparql: ($) => seq("body:sparql", $.text_block),
+    body_graphql: ($) => seq("body:graphql", $.text_block),
+    body_graphql_vars: ($) => seq("body:graphql:vars", $.text_block),
+    body_form_urlencoded: ($) =>
+      seq("body:form-urlencoded", $.dictionary_block),
+    body_multipart_form: ($) => seq("body:multipart-form", $.dictionary_block),
+    body: ($) => seq("body", $.text_block),
 
     vars: ($) => choice($.vars_pre_request, $.vars_post_response),
-    vars_pre_request: ($) => seq("vars:pre-request", $.dictionary),
-    vars_post_response: ($) => seq("vars:post-response", $.dictionary),
+    vars_pre_request: ($) => seq("vars:pre-request", $.dictionary_block),
+    vars_post_response: ($) => seq("vars:post-response", $.dictionary_block),
 
-    // TODO: refactor into assert dictionary
-    assert: ($) => seq("assert", $.block_content),
+    assert: ($) => seq("assert", $.dictionary_block),
 
     scripts: ($) => choice($.script_pre_request, $.script_post_response),
-    script_pre_request: ($) => seq("script:pre-request", $.block_content),
-    script_post_response: ($) => seq("script:post-response", $.block_content),
+    script_pre_request: ($) => seq("script:pre-request", $.text_block),
+    script_post_response: ($) => seq("script:post-response", $.text_block),
 
-    tests: ($) => seq("tests", $.block_content),
-    docs: ($) => seq("docs", $.block_content),
+    tests: ($) => seq("tests", $.text_block),
+    docs: ($) => seq("docs", $.text_block),
 
-    dictionary: ($) => seq("{", repeat1($.pair), "}"),
+    dictionary_block: ($) => seq("{", $.dictionary, "}"),
+    dictionary: ($) => repeat1($.pair),
     pair: ($) => seq($.key, ":", $.value, optional($._nl)),
     key: () => /[^}\s:]+/,
     value: () => /[^\s][^\n]*/,
 
-    block_content: ($) => seq("{", repeat(choice($._raw_content, $._any)), "}"),
-    _raw_content: ($) => seq("{", repeat(choice($._raw_content, $._any)), "}"),
+    text_block: ($) => seq("{", $.text, "}"),
+    text: ($) => repeat1(choice($._text, $._any)),
+    _text: ($) => seq("{", repeat(choice($._text, $._any)), "}"),
 
     _any: () => /[^{}]+/,
     _nl: () => /\r?\n/,

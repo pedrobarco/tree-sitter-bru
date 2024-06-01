@@ -846,6 +846,10 @@
     "named": false
   },
   {
+    "type": "comment",
+    "named": true
+  },
+  {
     "type": "connect",
     "named": false
   },

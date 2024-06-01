@@ -45,3 +45,5 @@
 (key) @property
 (value) @string
 (text) @string
+
+(comment) @comment

@@ -2,8 +2,9 @@
 module.exports = grammar({
   name: "bru",
 
-  extras: () => [
+  extras: ($) => [
     /\s/, // whitespace
+    $.comment,
   ],
 
   rules: {
@@ -114,5 +115,7 @@ module.exports = grammar({
 
     _any: () => /[^{}]+/,
     _nl: () => /\r?\n/,
+
+    comment: () => token(seq("#", /.*/)),
   },
 });

@@ -1,0 +1,92 @@
+============
+Line comment
+============
+
+# this is a comment
+meta {
+  name: Test Request
+  type: http
+  seq: 1
+}
+# this is another comment
+
+---
+
+(document
+  (comment)
+  (meta
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value)))))
+  (comment))
+
+=================
+Multiline comment
+=================
+
+# this is a comment
+# this is another comment
+meta {
+  name: Test Request
+  type: http
+  seq: 2
+}
+
+---
+
+(document
+  (comment)
+  (comment)
+  (meta
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+==============
+Inline comment
+==============
+
+meta { # this is a comment
+# this is another comment
+  name: Test # Request
+# this is yet another comment
+  type: http
+  seq: 2
+# this is yet another comment
+}
+
+---
+
+(document
+  (meta
+    (dictionary_block
+      (comment)
+      (comment)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (comment)
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value)))
+      (comment))))

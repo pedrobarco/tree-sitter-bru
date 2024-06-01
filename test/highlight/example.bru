@@ -1,0 +1,23 @@
+meta {
+# <- keyword
+  name: Send Bulk SMS
+  # <- property
+  #     ^ string
+}
+
+get {
+# <- keyword
+  url: https://api.textlocal.in/send
+  # <- property
+  #    ^ string
+  body: json
+  # <- property
+  #     ^ string
+  auth: bearer
+  # <- property
+  #     ^ string
+}
+
+body {
+  This is a test message
+}

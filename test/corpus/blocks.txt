@@ -1,0 +1,779 @@
+==========
+Meta block
+==========
+
+meta {
+  name: Send Bulk SMS
+  type: http
+  seq: 1
+}
+
+---
+
+(document
+  (meta
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+==============
+HTTP GET block
+==============
+
+get {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (get
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+===============
+HTTP POST block
+===============
+
+post {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (post
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+================
+HTTP PATCH block
+================
+
+patch {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (patch
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+==============
+HTTP PUT block
+==============
+
+put {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (put
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+=================
+HTTP DELETE block
+=================
+
+delete {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (delete
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+==================
+HTTP OPTIONS block
+==================
+
+options {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (options
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+===============
+HTTP HEAD block
+===============
+
+head {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (head
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+==================
+HTTP CONNECT block
+==================
+
+connect {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (connect
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+================
+HTTP TRACE block
+================
+
+trace {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (trace
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+===========
+Query block
+===========
+
+query {
+  apiKey: secret
+  numbers: 998877665
+  ~message: hello
+}
+
+---
+
+(document
+  (query
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+=============
+Headers block
+=============
+
+headers {
+  content-type: application/json
+  Authorization: Bearer 123
+  ~transaction-id: {{transactionId}}
+}
+
+---
+
+(document
+  (headers
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+================
+AWSv4 auth block
+================
+
+auth:awsv4 {
+  accessKeyId: A12345678
+  secretAccessKey: thisisasecret
+  sessionToken: thisisafakesessiontoken
+  service: execute-api
+  region: us-east-1
+  profileName: test_profile
+}
+
+---
+
+(document
+  (auths
+    (auth_awsv4
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+================
+Basic auth block
+================
+
+auth:basic {
+  username: john
+  password: secret
+}
+
+---
+
+(document
+  (auths
+    (auth_basic
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+=================
+Bearer auth block
+=================
+
+auth:bearer {
+  token: 123
+}
+
+---
+
+(document
+  (auths
+    (auth_bearer
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value)))))))
+
+=================
+Digest auth block
+=================
+
+auth:digest {
+  username: john
+  password: secret
+}
+
+---
+
+(document
+  (auths
+    (auth_digest
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+=================
+OAuth2 auth block
+=================
+
+auth:oauth2 {
+  grant_type: authorization_code
+  callback_url: http://localhost:8080/api/auth/oauth2/authorization_code/callback
+  authorization_url: http://localhost:8080/api/auth/oauth2/authorization_code/authorize
+  access_token_url: http://localhost:8080/api/auth/oauth2/authorization_code/token
+  client_id: client_id_1
+  client_secret: client_secret_1
+  scope: read write
+  pkce: false
+}
+
+---
+
+(document
+  (auths
+    (auth_oauth2
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+===============
+JSON body block
+===============
+
+body:json {
+  {
+    "hello": "world"
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_json
+      (text_block
+        (text)))))
+
+===============
+Text body block
+===============
+
+body:text {
+  This is a text body
+}
+
+---
+
+(document
+  (bodies
+    (body_text
+      (text_block
+        (text)))))
+
+===============
+XML body block
+===============
+
+body:xml {
+  <xml>
+    <name>John</name>
+    <age>30</age>
+  </xml>
+}
+
+---
+
+(document
+  (bodies
+    (body_xml
+      (text_block
+        (text)))))
+
+=================
+SparQL body block
+=================
+
+body:sparql {
+  SELECT * WHERE {
+    ?subject ?predicate ?object .
+  }
+  LIMIT 10
+}
+
+---
+
+(document
+  (bodies
+    (body_sparql
+      (text_block
+        (text)))))
+
+==================
+GraphQL body block
+==================
+
+body:graphql {
+  {
+    launchesPast {
+      launch_site {
+        site_name
+      }
+      launch_success
+    }
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_graphql
+      (text_block
+        (text)))))
+
+=======================
+GraphQL vars body block
+=======================
+
+body:graphql:vars {
+  {
+    "limit": 5
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_graphql_vars
+      (text_block
+        (text)))))
+
+===========================
+From URL encoded body block
+===========================
+
+body:form-urlencoded {
+  apikey: secret
+  numbers: +91998877665
+  ~message: hello
+}
+
+---
+
+(document
+  (bodies
+    (body_form_urlencoded
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+=========================
+From multipart body block
+=========================
+
+body:multipart-form {
+  apikey: secret
+  numbers: +91998877665
+  ~message: hello
+}
+
+
+---
+
+(document
+  (bodies
+    (body_multipart_form
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+======================
+Pre-request vars block
+======================
+
+vars:pre-request {
+  departingDate: 2020-01-01
+  ~returningDate: 2020-01-02
+}
+
+---
+
+(document
+  (vars
+    (vars_pre_request
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+========================
+Post-response vars block
+========================
+
+vars:post-response {
+  token: $res.body.token
+  @orderNumber: $res.body.orderNumber
+  ~petId: $res.body.id
+  ~@transactionId: $res.body.transactionId
+}
+
+---
+
+(document
+  (vars
+    (vars_post_response
+      (dictionary_block
+        (dictionary
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value))
+          (pair
+            (key)
+            (value)))))))
+
+============
+Assert block
+============
+
+assert {
+  $res.status: 200
+  ~$res.body.message: success
+}
+
+---
+
+(document
+  (assert
+    (dictionary_block
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+========================
+Pre-request script block
+========================
+
+script:pre-request {
+  const foo = 'bar';
+}
+
+---
+
+(document
+  (scripts
+    (script_pre_request
+      (text_block
+        (text)))))
+
+==========================
+Post-response script block
+==========================
+
+script:post-response {
+  const bar = 'foo';
+}
+
+---
+
+(document
+  (scripts
+    (script_post_response
+      (text_block
+        (text)))))
+
+===========
+Tests block
+===========
+
+tests {
+  function onResponse(request, response) {
+    expect(response.status).to.equal(200);
+  }
+}
+
+---
+
+(document
+  (tests
+    (text_block
+      (text))))
+
+==========
+Docs block
+==========
+
+docs {
+  This is a documentation block
+}
+
+---
+
+(document
+  (docs
+    (text_block
+      (text))))

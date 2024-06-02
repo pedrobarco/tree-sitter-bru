@@ -1,15 +1,23 @@
 package tree_sitter_bru_test
 
 import (
+	"context"
 	"testing"
 
 	tree_sitter_bru "github.com/pedrobarco/tree-sitter-bru/bindings/go"
-	tree_sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/smacker/go-tree-sitter"
 )
 
-func TestCanLoadGrammar(t *testing.T) {
-	language := tree_sitter.NewLanguage(tree_sitter_bru.Language())
-	if language == nil {
-		t.Errorf("Error loading Bru grammar")
+func TestGrammar(t *testing.T) {
+	lang := tree_sitter_bru.GetLanguage()
+
+	n, err := sitter.ParseCtx(context.Background(), []byte("meta { \n\ttype: http \n}"), lang)
+	if err != nil {
+		t.Fatalf("Error parsing: %s", err)
+	}
+
+	expected := "(document (meta (dictionary_block (dictionary (pair (key) (value))))))"
+	if n.String() != expected {
+		t.Fatalf("Expected root node to be '%s', got '%s'", expected, n)
 	}
 }

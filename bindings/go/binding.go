@@ -1,9 +1,7 @@
 package tree_sitter_bru
 
-// #cgo CFLAGS: -std=c11 -fPIC -I${SRCDIR}/../../src
-// #cgo LDFLAGS: -L${SRCDIR}/../../ -lparser
-// #include "../../src/parser.c"
-// // NOTE: if your language has an external scanner, add it here.
+// #cgo CFLAGS: -std=c11 -fPIC
+// #include "src/parser.c"
 import "C"
 
 import "unsafe"

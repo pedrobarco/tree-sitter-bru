@@ -3,8 +3,8 @@ package tree_sitter_bru_test
 import (
 	"testing"
 
+	tree_sitter_bru "github.com/pedrobarco/tree-sitter-bru/bindings/go"
 	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/tree-sitter/tree-sitter-bru"
 )
 
 func TestCanLoadGrammar(t *testing.T) {

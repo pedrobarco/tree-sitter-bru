@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-bru
+module github.com/pedrobarco/tree-sitter-bru/bindings/go
 
 go 1.22
 

@@ -7,21 +7,18 @@ module.exports = grammar({
   rules: {
     document: ($) =>
       repeat(
-        field(
-          "tag",
-          choice(
-            $.meta,
-            $.http,
-            $.query,
-            $.headers,
-            $.auths,
-            $.bodies,
-            $.vars,
-            $.assert,
-            $.scripts,
-            $.tests,
-            $.docs,
-          ),
+        choice(
+          $.meta,
+          $.http,
+          $.query,
+          $.headers,
+          $.auths,
+          $.bodies,
+          $.vars,
+          $.assert,
+          $.scripts,
+          $.tests,
+          $.docs,
         ),
       ),
 

@@ -16,7 +16,7 @@ func TestGrammar(t *testing.T) {
 		t.Fatalf("Error parsing: %s", err)
 	}
 
-	expected := "(document tag: (meta (keyword) (dictionary (pair (key) (value)))))"
+	expected := "(document (meta (keyword) (dictionary (pair (key) (value)))))"
 	if n.String() != expected {
 		t.Fatalf("Expected root node to be '%s', got '%s'", expected, n)
 	}

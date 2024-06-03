@@ -4,57 +4,53 @@
     "document": {
       "type": "REPEAT",
       "content": {
-        "type": "FIELD",
-        "name": "tag",
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "meta"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "http"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "query"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "headers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "auths"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "bodies"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "vars"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "assert"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "scripts"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "tests"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "docs"
-            }
-          ]
-        }
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "meta"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "http"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "query"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "headers"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "auths"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "bodies"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "vars"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "assert"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "scripts"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "tests"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "docs"
+          }
+        ]
       }
     },
     "meta": {

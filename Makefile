@@ -109,4 +109,13 @@ clean:
 test:
 	$(TS) test
 
+
+generate:
+	$(TS) generate
+
+bindings: generate
+	cp src/parser.c bindings/go/
+	cp src/tree_sitter/parser.h bindings/go/
+	sed -i 's|tree_sitter/parser.h|parser.h|g' bindings/go/parser.c
+
 .PHONY: all install uninstall clean test

@@ -1,0 +1,25 @@
+==========
+Meta block
+==========
+
+meta {
+  name: Send Bulk SMS
+  type: http
+  seq: 1
+}
+
+---
+
+(document
+  (meta
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

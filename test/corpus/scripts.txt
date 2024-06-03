@@ -1,0 +1,34 @@
+========================
+Pre-request script block
+========================
+
+script:pre-request {
+  const foo = 'bar';
+}
+
+---
+
+(document
+  (scripts
+    (script_pre_request
+      (keyword)
+      (text_block
+        (text)))))
+
+==========================
+Post-response script block
+==========================
+
+script:post-response {
+  const bar = 'foo';
+}
+
+---
+
+(document
+  (scripts
+    (script_post_response
+      (keyword)
+      (text_block
+        (text)))))
+

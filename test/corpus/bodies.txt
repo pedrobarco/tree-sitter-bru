@@ -1,0 +1,173 @@
+===============
+JSON body block
+===============
+
+body:json {
+  {
+    "hello": "world"
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_json
+      (keyword)
+      (text_block
+        (text)))))
+
+===============
+Text body block
+===============
+
+body:text {
+  This is a text body
+}
+
+---
+
+(document
+  (bodies
+    (body_text
+      (keyword)
+      (text_block
+        (text)))))
+
+===============
+XML body block
+===============
+
+body:xml {
+  <xml>
+    <name>John</name>
+    <age>30</age>
+  </xml>
+}
+
+---
+
+(document
+  (bodies
+    (body_xml
+      (keyword)
+      (text_block
+        (text)))))
+
+=================
+SparQL body block
+=================
+
+body:sparql {
+  SELECT * WHERE {
+    ?subject ?predicate ?object .
+  }
+  LIMIT 10
+}
+
+---
+
+(document
+  (bodies
+    (body_sparql
+      (keyword)
+      (text_block
+        (text)))))
+
+==================
+GraphQL body block
+==================
+
+body:graphql {
+  {
+    launchesPast {
+      launch_site {
+        site_name
+      }
+      launch_success
+    }
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_graphql
+      (keyword)
+      (text_block
+        (text)))))
+
+=======================
+GraphQL vars body block
+=======================
+
+body:graphql:vars {
+  {
+    "limit": 5
+  }
+}
+
+---
+
+(document
+  (bodies
+    (body_graphql_vars
+      (keyword)
+      (text_block
+        (text)))))
+
+===========================
+From URL encoded body block
+===========================
+
+body:form-urlencoded {
+  apikey: secret
+  numbers: +91998877665
+  ~message: hello
+}
+
+---
+
+(document
+  (bodies
+    (body_form_urlencoded
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+=========================
+From multipart body block
+=========================
+
+body:multipart-form {
+  apikey: secret
+  numbers: +91998877665
+  ~message: hello
+}
+
+---
+
+(document
+  (bodies
+    (body_multipart_form
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+

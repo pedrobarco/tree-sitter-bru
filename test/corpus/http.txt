@@ -1,0 +1,233 @@
+==============
+HTTP GET block
+==============
+
+get {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+===============
+HTTP POST block
+===============
+
+post {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+================
+HTTP PATCH block
+================
+
+patch {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+==============
+HTTP PUT block
+==============
+
+put {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+=================
+HTTP DELETE block
+=================
+
+delete {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+==================
+HTTP OPTIONS block
+==================
+
+options {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+===============
+HTTP HEAD block
+===============
+
+head {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+==================
+HTTP CONNECT block
+==================
+
+connect {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+
+================
+HTTP TRACE block
+================
+
+trace {
+  url: https://api.textlocal.in/send
+  body: json
+  auth: bearer
+}
+
+---
+
+(document
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

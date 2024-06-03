@@ -1,0 +1,25 @@
+===========
+Query block
+===========
+
+query {
+  apiKey: secret
+  numbers: 998877665
+  ~message: hello
+}
+
+---
+
+(document
+  (query
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

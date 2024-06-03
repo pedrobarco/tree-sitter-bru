@@ -15,17 +15,17 @@ meta {
 (document
   (comment)
   (meta
-    (dictionary_block
-      (dictionary
-        (pair
-          (key)
-          (value))
-        (pair
-          (key)
-          (value))
-        (pair
-          (key)
-          (value)))))
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))))
   (comment))
 
 =================
@@ -46,17 +46,17 @@ meta {
   (comment)
   (comment)
   (meta
-    (dictionary_block
-      (dictionary
-        (pair
-          (key)
-          (value))
-        (pair
-          (key)
-          (value))
-        (pair
-          (key)
-          (value))))))
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
 
 ==============
 Inline comment
@@ -75,18 +75,19 @@ meta { # this is a comment
 
 (document
   (meta
-    (dictionary_block
+    (keyword)
+    (dictionary
       (comment)
       (comment)
-      (dictionary
-        (pair
-          (key)
-          (value))
-        (comment)
-        (pair
-          (key)
-          (value))
-        (pair
-          (key)
-          (value)))
+      (pair
+        (key)
+        (value))
+      (comment)
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
       (comment))))
+

@@ -4,223 +4,133 @@
     "document": {
       "type": "REPEAT",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "meta"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "http"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "query"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "headers"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "auths"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bodies"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "vars"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "assert"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "scripts"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "tests"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "docs"
-          }
-        ]
+        "type": "FIELD",
+        "name": "tag",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "meta"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "http"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "query"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "headers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "auths"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "bodies"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "vars"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "assert"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "scripts"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "tests"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "docs"
+            }
+          ]
+        }
       }
     },
     "meta": {
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "meta"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "meta"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
     "http": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "get"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "http_verb"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "post"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "put"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "delete"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "patch"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "options"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "head"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "connect"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "trace"
+          "name": "dictionary"
         }
       ]
     },
-    "get": {
-      "type": "SEQ",
+    "http_verb": {
+      "type": "CHOICE",
       "members": [
         {
           "type": "STRING",
           "value": "get"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "post": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "post"
         },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "put": {
-      "type": "SEQ",
-      "members": [
         {
           "type": "STRING",
           "value": "put"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "delete": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "delete"
         },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "patch": {
-      "type": "SEQ",
-      "members": [
         {
           "type": "STRING",
           "value": "patch"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "options": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "options"
         },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "head": {
-      "type": "SEQ",
-      "members": [
         {
           "type": "STRING",
           "value": "head"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "connect": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "connect"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
-        }
-      ]
-    },
-    "trace": {
-      "type": "SEQ",
-      "members": [
-        {
           "type": "STRING",
           "value": "trace"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary_block"
         }
       ]
     },
@@ -228,12 +138,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "query"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "query"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -241,12 +156,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "headers"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "headers"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -279,12 +199,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "auth:awsv4"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:awsv4"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -292,12 +217,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "auth:basic"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:basic"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -305,12 +235,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "auth:bearer"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:bearer"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -318,12 +253,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "auth:digest"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:digest"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -331,12 +271,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "auth:oauth2"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:oauth2"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -385,8 +330,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:json"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:json"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -398,8 +348,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:text"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:text"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -411,8 +366,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:xml"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:xml"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -424,8 +384,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:sparql"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:sparql"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -437,8 +402,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:graphql"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:graphql"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -450,8 +420,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:graphql:vars"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:graphql:vars"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -463,12 +438,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:form-urlencoded"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:form-urlencoded"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -476,12 +456,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body:multipart-form"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body:multipart-form"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -489,8 +474,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "body"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "body"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -515,12 +505,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "vars:pre-request"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "vars:pre-request"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -528,12 +523,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "vars:post-response"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "vars:post-response"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -541,12 +541,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "assert"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "assert"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
-          "name": "dictionary_block"
+          "name": "dictionary"
         }
       ]
     },
@@ -567,8 +572,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "script:pre-request"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "script:pre-request"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -580,8 +590,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "script:post-response"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "script:post-response"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -593,8 +608,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "tests"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "tests"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -606,8 +626,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "docs"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "docs"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -615,7 +640,7 @@
         }
       ]
     },
-    "dictionary_block": {
+    "dictionary": {
       "type": "SEQ",
       "members": [
         {
@@ -623,21 +648,17 @@
           "value": "{"
         },
         {
-          "type": "SYMBOL",
-          "name": "dictionary"
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "pair"
+          }
         },
         {
           "type": "STRING",
           "value": "}"
         }
       ]
-    },
-    "dictionary": {
-      "type": "REPEAT1",
-      "content": {
-        "type": "SYMBOL",
-        "name": "pair"
-      }
     },
     "pair": {
       "type": "SEQ",
@@ -653,18 +674,6 @@
         {
           "type": "SYMBOL",
           "name": "value"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_nl"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
         }
       ]
     },
@@ -746,6 +755,10 @@
       "type": "PATTERN",
       "value": "\\r?\\n"
     },
+    "_s": {
+      "type": "PATTERN",
+      "value": "\\s+"
+    },
     "comment": {
       "type": "TOKEN",
       "content": {
@@ -765,12 +778,16 @@
   },
   "extras": [
     {
-      "type": "PATTERN",
-      "value": "\\s"
+      "type": "SYMBOL",
+      "name": "comment"
     },
     {
       "type": "SYMBOL",
-      "name": "comment"
+      "name": "_nl"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_s"
     }
   ],
   "conflicts": [],

@@ -1,0 +1,152 @@
+================
+AWSv4 auth block
+================
+
+auth:awsv4 {
+  accessKeyId: A12345678
+  secretAccessKey: thisisasecret
+  sessionToken: thisisafakesessiontoken
+  service: execute-api
+  region: us-east-1
+  profileName: test_profile
+}
+
+---
+
+(document
+  (auths
+    (auth_awsv4
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+
+================
+Basic auth block
+================
+
+auth:basic {
+  username: john
+  password: secret
+}
+
+---
+
+(document
+  (auths
+    (auth_basic
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+=================
+Bearer auth block
+=================
+
+auth:bearer {
+  token: 123
+}
+
+---
+
+(document
+  (auths
+    (auth_bearer
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))))))
+
+=================
+Digest auth block
+=================
+
+auth:digest {
+  username: john
+  password: secret
+}
+
+---
+
+(document
+  (auths
+    (auth_digest
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+
+=================
+OAuth2 auth block
+=================
+
+auth:oauth2 {
+  grant_type: authorization_code
+  callback_url: http://localhost:8080/api/auth/oauth2/authorization_code/callback
+  authorization_url: http://localhost:8080/api/auth/oauth2/authorization_code/authorize
+  access_token_url: http://localhost:8080/api/auth/oauth2/authorization_code/token
+  client_id: client_id_1
+  client_secret: client_secret_1
+  scope: read write
+  pkce: false
+}
+
+---
+
+(document
+  (auths
+    (auth_oauth2
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+

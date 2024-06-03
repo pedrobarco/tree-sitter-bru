@@ -1,0 +1,18 @@
+===========
+Tests block
+===========
+
+tests {
+  function onResponse(request, response) {
+    expect(response.status).to.equal(200);
+  }
+}
+
+---
+
+(document
+  (tests
+    (keyword)
+    (text_block
+      (text))))
+

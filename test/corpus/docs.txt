@@ -1,0 +1,15 @@
+==========
+Docs block
+==========
+
+docs {
+  This is a documentation block
+}
+
+---
+
+(document
+  (docs
+    (keyword)
+    (text_block
+      (text))))

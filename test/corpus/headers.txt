@@ -1,0 +1,25 @@
+=============
+Headers block
+=============
+
+headers {
+  content-type: application/json
+  Authorization: Bearer 123
+  ~transaction-id: {{transactionId}}
+}
+
+---
+
+(document
+  (headers
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

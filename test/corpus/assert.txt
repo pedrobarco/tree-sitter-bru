@@ -1,0 +1,21 @@
+============
+Assert block
+============
+
+assert {
+  $res.status: 200
+  ~$res.body.message: success
+}
+
+---
+
+(document
+  (assert
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

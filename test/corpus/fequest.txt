@@ -1,0 +1,53 @@
+============
+Full Request
+============
+
+meta {
+  name: Search Repos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/search/repositories
+}
+
+query {
+  q: react
+  order: desc
+  per_page: 10
+}
+
+---
+
+(document
+  (meta
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))))
+  (http
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))))
+  (query
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))

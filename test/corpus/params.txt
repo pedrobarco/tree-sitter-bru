@@ -1,0 +1,42 @@
+=================
+Path params block
+=================
+
+params:path {
+  id: 132
+}
+
+---
+
+(document
+  (params
+    (params_path
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))))))
+
+==================
+Query params block
+==================
+
+params:query {
+  name: John
+  age: 25
+}
+
+---
+
+(document
+  (params
+    (params_query
+      (keyword)
+      (dictionary
+        (pair
+          (key)
+          (value))
+        (pair
+          (key)
+          (value))))))
+

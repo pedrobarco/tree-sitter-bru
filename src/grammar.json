@@ -20,6 +20,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "params"
+          },
+          {
+            "type": "SYMBOL",
             "name": "headers"
           },
           {
@@ -138,6 +142,55 @@
           "content": {
             "type": "STRING",
             "value": "query"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "params": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "params_path"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "params_query"
+        }
+      ]
+    },
+    "params_path": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "params:path"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "params_query": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "params:query"
           },
           "named": true,
           "value": "keyword"

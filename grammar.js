@@ -11,6 +11,7 @@ module.exports = grammar({
           $.meta,
           $.http,
           $.query,
+          $.params,
           $.headers,
           $.auths,
           $.bodies,
@@ -39,6 +40,10 @@ module.exports = grammar({
       ),
 
     query: ($) => seq(alias("query", $.keyword), $.dictionary),
+
+    params: ($) => choice($.params_path, $.params_query),
+    params_path: ($) => seq(alias("params:path", $.keyword), $.dictionary),
+    params_query: ($) => seq(alias("params:query", $.keyword), $.dictionary),
 
     headers: ($) => seq(alias("headers", $.keyword), $.dictionary),
 

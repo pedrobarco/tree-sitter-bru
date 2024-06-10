@@ -433,6 +433,10 @@
           "named": true
         },
         {
+          "type": "params",
+          "named": true
+        },
+        {
           "type": "query",
           "named": true
         },
@@ -527,6 +531,63 @@
         },
         {
           "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "params",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "params_path",
+          "named": true
+        },
+        {
+          "type": "params_query",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "params_path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "params_query",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
           "named": true
         }
       ]

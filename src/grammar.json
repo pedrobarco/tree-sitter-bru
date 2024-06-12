@@ -2,7 +2,20 @@
   "name": "bru",
   "rules": {
     "document": {
-      "type": "REPEAT",
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_request"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_env"
+        }
+      ]
+    },
+    "_request": {
+      "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
         "members": [
@@ -53,6 +66,18 @@
           {
             "type": "SYMBOL",
             "name": "docs"
+          }
+        ]
+      }
+    },
+    "_env": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "env_vars"
           }
         ]
       }
@@ -576,6 +601,24 @@
           "content": {
             "type": "STRING",
             "value": "vars:post-response"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "env_vars": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "vars"
           },
           "named": true,
           "value": "keyword"

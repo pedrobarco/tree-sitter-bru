@@ -51,3 +51,30 @@ vars:post-response {
         (pair
           (key)
           (value))))))
+
+========================
+Env vars block
+========================
+
+vars {
+  token: 1234
+  @orderNumber: 5678
+  ~petId: 91011
+}
+
+---
+
+(document
+  (env_vars
+    (keyword)
+    (dictionary
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value))
+      (pair
+        (key)
+        (value)))))
+

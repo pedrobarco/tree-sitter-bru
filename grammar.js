@@ -5,8 +5,10 @@ module.exports = grammar({
   extras: ($) => [$.comment, $._nl, $._s],
 
   rules: {
-    document: ($) =>
-      repeat(
+    document: ($) => choice($._request, $._env),
+
+    _request: ($) =>
+      repeat1(
         choice(
           $.meta,
           $.http,
@@ -22,6 +24,8 @@ module.exports = grammar({
           $.docs,
         ),
       ),
+
+    _env: ($) => repeat1(choice($.env_vars)),
 
     meta: ($) => seq(alias("meta", $.keyword), $.dictionary),
 
@@ -91,6 +95,8 @@ module.exports = grammar({
       seq(alias("vars:pre-request", $.keyword), $.dictionary),
     vars_post_response: ($) =>
       seq(alias("vars:post-response", $.keyword), $.dictionary),
+
+    env_vars: ($) => seq(alias("vars", $.keyword), $.dictionary),
 
     assert: ($) => seq(alias("assert", $.keyword), $.dictionary),
 

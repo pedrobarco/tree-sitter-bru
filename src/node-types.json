@@ -402,7 +402,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "assert",
@@ -418,6 +418,10 @@
         },
         {
           "type": "docs",
+          "named": true
+        },
+        {
+          "type": "env_vars",
           "named": true
         },
         {
@@ -450,6 +454,25 @@
         },
         {
           "type": "vars",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "env_vars",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
           "named": true
         }
       ]
